@@ -40,7 +40,14 @@ void CadastroProduto(cadproduto vetor[], int car[], int num){
     scanf("%[^\n]s",&vetor[num].categoria);
 }
 
+int VerificarCodigo(cadproduto vetor[], int num, int numero){
+    int i ;;
+    for(i = 0; i < num; i++){
+        if(vetor[i].codigo == numero){
 
+            return 0;
+        }
+    }
 
     return 1;
 }
