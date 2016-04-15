@@ -1,0 +1,31 @@
+void CadastroDistribuidor(caddistribuidor vetor[], int car[], int num){
+    int veri = 0;
+    printf("===================== CADASTRO DISTRIBUIDOR =====================\n");
+    printf("CODIGO DISTRIBUIDOR: ");
+    scanf("%d",&vetor[num].codigo);
+    do{
+        veri = VerificarCodigo(vetor, num, vetor[num].codigo);
+        if(veri == 0){
+            printf("!!! ERRO ESSE CODIGO JA EXISTE DIGITE UM CODIGO DIFERENTE DE [ %d ] !!!\n"  ,vetor[num].codigo);
+            scanf("%d",&vetor[num].codigo);
+        };
+    }while(veri == 0);
+
+    printf("NOME: ");
+    fflush(stdin);
+    scanf("%[^\n]s",&vetor[num].nome);
+
+    printf("ENDERECO: ");
+    fflush(stdin);
+    scanf("%[^\n]s",&vetor[num].endereco);
+
+    printf("CIDADE: ");
+    scanf("%[^\n]s",&vetor[num].cidade);
+
+    printf("ESTADO: ");
+    scanf("%[^\n]s",&vetor[num].estado);
+
+    printf("TELEFONE: ");
+    fflush(stdin);
+    scanf("%d",&vetor[num].telefone);
+}
