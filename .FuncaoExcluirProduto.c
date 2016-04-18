@@ -12,7 +12,7 @@ int ExcluirProduto(cadproduto vetor[], int num){
     mod = &vetor;
     do{
         system("cls");
-        printf("==============  EXCLUIR PRODUTO ====================\n");
+        printf("==============  EXCLUIR PRODUTO ===================\n");
         printf("DIGITE O CODIGO DO PRODUTO: ");
         scanf("%d",&codigo);
         veri = VerificarCodigo(vetor, codigo, num, codigo, 1);
@@ -20,11 +20,11 @@ int ExcluirProduto(cadproduto vetor[], int num){
             printf("!!! ERRO DIGITE UM CODIGO VALIDO !!!\n");
         }
         else if(vetor[veri].quantidade > 0){
-            printf("!!! ERRO PRODUTO NAO PODE SER EXCLUIDO QUANTIDADE E ACIMA DE 0 NO ESTOQUE !!!\n");
+            printf("!!! ERRO PRODUTO NAO PODE SER EXCLUIDO QUANTIDADE ACIMA DE 0 NO ESTOQUE !!!\n");
             printf("!!! TEM QUE ZERA PARA EXCLUIR ESSE PRODUTO !!!\n");
         }
         else{
-            printf("VOCE DESEJA EXCLUIR %s DEPOIS QUE EXCLUIR NAO TEM COMO RECUPERAR ESSES DADOS\n[ 0 ] CONFIRMAR \n[ 1 ] NAO CONFIRMAR\n", vetor[veri].nome);
+            printf("VOCE DESEJA EXCLUIR %s APOS EXCLUIR NAO HA COMO RECUPERAR ESSES DADOS\n[ 0 ] CONFIRMAR \n[ 1 ] NAO CONFIRMAR\n", vetor[veri].nome);
             scanf("%d",&confirmar);
             if(confirmar == 0){
                 if(veri < (num - 1)){
